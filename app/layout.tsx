@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'blackroadai.com | BlackRoad OS',
-  description: 'BlackRoad AI Platform - Sovereign AI Solutions',
+  description: 'Sovereign AI platform. Deploy, train, and run AI models on your own infrastructure.',
 }
 
 export default function RootLayout({
@@ -12,6 +12,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="https://blackroad.io/favicon.ico" />
+      </head>
       <body style={{
         margin: 0,
         padding: 0,
@@ -20,6 +23,11 @@ export default function RootLayout({
         color: '#fff',
         minHeight: '100vh',
       }}>
+        {/* Accent gradient strip */}
+        <div style={{
+          height: '3px',
+          background: 'linear-gradient(90deg, #F5A623 0%, #FF1D6C 38.2%, #9C27B0 61.8%, #2979FF 100%)',
+        }} />
         {children}
       </body>
     </html>
